@@ -1,13 +1,14 @@
 import './App.css'
-import Home from './views/Home'
 import TopMenu from './components/TopMenu'
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import router from './routes'
 
 function App() {
 
   return (
     <div className="App">
       <TopMenu/>
-      <Home/>
+      <RouterProvider router={createBrowserRouter(router) }/>
     </div>
   )
 }
