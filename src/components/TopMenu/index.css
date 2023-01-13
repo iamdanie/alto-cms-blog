@@ -1,0 +1,9 @@
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #3a3a3b;
+  color: #ddd;
+  padding: 1rem;
+}

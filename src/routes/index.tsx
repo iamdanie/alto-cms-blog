@@ -1,30 +1,31 @@
-import {RouteObject} from 'react-router-dom'
-import {Home, Contact, About, Blog, Post, CreatePost} from '../views'
+import React from 'react'
+import { RouteObject } from 'react-router-dom'
+import { Home, Contact, About, Blog, Post, CreatePost } from '../views'
 
 const routes: RouteObject[] = [
   {
     path: '/',
-    element: <Home/>
+    element: <Home />
   },
   {
     path: '/contact',
-    element: <Contact/>
+    element: <Contact />
   },
   {
     path: '/about',
-    element: <About/>
+    element: <About />
   },
   {
     path: '/blog',
-    element: <Blog/>
+    element: <Blog />
   },
   {
     path: '/post/:id',
-    element: <Post/>
+    element: <Post />
   },
   {
     path: '/new',
-    element: <CreatePost/>
+    element: <CreatePost />
   }
 ]
 

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
-function BlogSummary (): React.ReactElement<{}> {
-    return (<div>BlogSummary</div>)
+function BlogSummary(): React.ReactElement<{}> {
+  return <div>BlogSummary</div>
 }
 
 export default BlogSummary
