@@ -13,7 +13,13 @@ function setItem(key: string, value: any) {
     return
   }
 
-  localStorage.setItem(key, value?.toString())
+  try {
+    localStorage.setItem(key, JSON.stringify(value))
+
+    return value
+  } catch (e: unknown) {
+    return null
+  }
 }
 
 export { getItem, setItem }
