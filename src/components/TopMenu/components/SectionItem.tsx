@@ -1,13 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-type SectionItemProps = {
-  title: string;
-  route: string;
-};
+interface SectionItemProps {
+  title: string
+  route: string
+}
 
-const SectionItem = ({ title, route }: SectionItemProps) => (
+const SectionItem: React.FC<SectionItemProps> = ({ title, route }) => (
   <Link to={route}>{title}</Link>
-);
+)
 
-export default SectionItem;
+export default SectionItem

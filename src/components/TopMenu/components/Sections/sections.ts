@@ -1,9 +1,9 @@
 export default Object.freeze([
   {
-    title: "Home",
-    route: "/",
+    title: 'Home',
+    route: '/'
   },
-  { title: "Blog", route: "/blog" },
-  { title: "About", route: "/about" },
-  { title: "Contact", route: "/contact" },
-]);
+  { title: 'Blog', route: '/blog' },
+  { title: 'About', route: '/about' },
+  { title: 'Contact', route: '/contact' }
+])

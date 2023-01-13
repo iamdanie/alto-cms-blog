@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 function HeroBanner(): React.ReactElement<{}> {
-  return <div>HeroBanner</div>;
+  return <div>HeroBanner</div>
 }
 
-export default HeroBanner;
+export default HeroBanner

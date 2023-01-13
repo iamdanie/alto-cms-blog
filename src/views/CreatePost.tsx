@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 function CreatePost(): React.ReactElement<{}> {
-  return <>CreatePost</>;
+  return <>CreatePost</>
 }
 
-export default CreatePost;
+export default CreatePost

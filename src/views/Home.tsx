@@ -1,6 +1,6 @@
-import React from "react";
-import BlogSummary from "../components/BlogSummary";
-import HeroBanner from "../components/HeroBanner";
+import React from 'react'
+import BlogSummary from '../components/BlogSummary'
+import HeroBanner from '../components/HeroBanner'
 
 function Home(): React.ReactElement<{}> {
   return (
@@ -8,7 +8,7 @@ function Home(): React.ReactElement<{}> {
       <HeroBanner />
       <BlogSummary />
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home
