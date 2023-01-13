@@ -1,7 +1,7 @@
 import React from "react";
 
-function Blog (): React.ReactElement<{}> {
-    return (<>Blog</>)
+function Blog(): React.ReactElement<{}> {
+  return <>Blog</>;
 }
 
-export default Blog
+export default Blog;

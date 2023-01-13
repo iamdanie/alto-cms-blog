@@ -1,7 +1,7 @@
 import React from "react";
 
-function About (): React.ReactElement<{}> {
-    return (<>About</>)
+function About(): React.ReactElement<{}> {
+  return <>About</>;
 }
 
-export default About
+export default About;
