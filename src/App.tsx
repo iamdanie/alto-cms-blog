@@ -1,14 +1,16 @@
 import React from 'react'
+import { Route, RouteObject, Routes } from 'react-router-dom'
 import './App.css'
 import TopMenu from './components/TopMenu'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import router from './routes'
 
 function App(): React.ReactElement<{}> {
   return (
     <div className="App">
       <TopMenu />
-      <RouterProvider router={createBrowserRouter(router)} />
+      <Routes>
+        {router.map(({ path, element }: RouteObject) => (<Route key={path} path={path} element={element} />))}
+      </Routes>
     </div>
   )
 }
