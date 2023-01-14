@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { getPostById } from '../../store/post'
 import type { Post } from '../../types/Post'
+import { formatDate } from '../../helpers/date'
 import './index.css'
 
 function PostView(): React.ReactElement<{}> {
@@ -15,15 +16,6 @@ function PostView(): React.ReactElement<{}> {
       setPost(post)
     }
   }, [id])
-
-  const formatDate = (date: string) => {
-    const postDate = new Date(date)
-    const formatted = new Intl.DateTimeFormat('en-US', {
-      dateStyle: 'full'
-    }).format(postDate)
-
-    return formatted
-  }
 
   if (!post) {
     return <div>Post Not Found</div>
