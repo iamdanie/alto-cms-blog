@@ -33,4 +33,8 @@ function getPostById(id: string) {
   return found
 }
 
-export { createPost, getPostById }
+function getPosts() {
+  return getItem('posts') || []
+}
+
+export { createPost, getPosts, getPostById }

@@ -1,0 +1,38 @@
+.blog-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    max-height: 420px;
+    overflow-y: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.blog-item:hover .blog-item-container{
+    opacity: 0.1;
+}
+
+.blog-item:hover .see-more-btn{
+    visibility: visible;
+}
+
+.blog-item-title {
+    margin: 0;
+}
+.blog-item-author {
+    color: #5d576b;
+    margin: 0;
+}
+.blog-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.see-more-btn {
+    position: absolute;
+    top: 50%;
+    right: 38%;
+    visibility: hidden;
+}
