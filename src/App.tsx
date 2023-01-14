@@ -9,7 +9,9 @@ function App(): React.ReactElement<{}> {
     <div className="App">
       <TopMenu />
       <Routes>
-        {router.map(({ path, element }: RouteObject) => (<Route key={path} path={path} element={element} />))}
+        {router.map(({ path, element }: RouteObject) => (
+          <Route key={path} path={path} element={element} />
+        ))}
       </Routes>
     </div>
   )
