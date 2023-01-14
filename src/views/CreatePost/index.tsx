@@ -42,6 +42,7 @@ function CreatePost(): React.ReactElement<{}> {
           placeholder="Add a title for your new blog entry"
           value={title ?? ''}
           onChange={({ target: { value } }) => setTitle(value)}
+          maxLength={100}
         />
       </div>
       <div className="form-entry">

@@ -8,11 +8,14 @@ function BlogSummary(): React.ReactElement<{}> {
   const posts: Post[] = getPosts()
 
   return (
-    <div className="summary-container">
-      {posts.map(post => (
-        <BlogItem key={post.id} post={post} />
-      ))}
-    </div>
+    <>
+      <h1>Latest Posts</h1>
+      <div className="summary-container">
+        {posts.slice(0, 4).map(post => (
+          <BlogItem key={post.id} post={post} />
+        ))}
+      </div>
+    </>
   )
 }
 
