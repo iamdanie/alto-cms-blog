@@ -26,4 +26,11 @@ function createPost(post: CreatePost) {
   return newPost
 }
 
-export { createPost }
+function getPostById(id: string) {
+  const posts: Post[] = getItem('posts') || []
+  const found = posts.find(post => post.id === Number(id))
+
+  return found
+}
+
+export { createPost, getPostById }
