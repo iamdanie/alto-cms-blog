@@ -17,10 +17,12 @@
 
 .blog-item-title {
     margin: 0;
+    text-align: start;
 }
 .blog-item-author {
     color: #5d576b;
-    margin: 0;
+    margin: 1rem 0 1rem 0;
+    text-align: start;
 }
 .blog-item-container {
     display: flex;
