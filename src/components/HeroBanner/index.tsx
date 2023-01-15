@@ -4,7 +4,7 @@ import './index.css'
 function HeroBanner(): React.ReactElement<{}> {
   return (
     <div className="hero-image">
-      <img src="/public/hero.jpg" />
+      <img src="/hero.jpg" />
     </div>
   )
 }

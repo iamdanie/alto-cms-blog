@@ -6,7 +6,7 @@
 
   color-scheme: dark;
   color: #000;
-  background-color: #e6ebe0;
+  background-color: #ddd;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,5 +17,4 @@
 
 body {
   margin: 0;
-  display: block;
 }
