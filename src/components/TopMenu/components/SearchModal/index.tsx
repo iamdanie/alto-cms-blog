@@ -26,16 +26,15 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   }, [isOpen])
 
   const handlePostsSearch = (value: string) => {
-    const searchValue = value.toLowerCase()
+    setSearchTerm(value)
 
-    setSearchTerm(searchValue)
-
-    if (searchValue === '') {
+    if (value === '') {
       setFoundPosts([])
+      return
     }
 
     const found = posts.filter(({ title }) =>
-      title.toLowerCase().includes(value)
+      title.toLowerCase().includes(value.toLowerCase())
     )
 
     setFoundPosts(found)
