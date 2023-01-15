@@ -4,3 +4,25 @@
     grid-gap: 10px;
     padding: 0 3rem 3rem 3rem;
 }
+
+@media screen and (max-width: 768px) {
+    .summary-container {
+        grid-template-columns: auto;
+    }
+}
+
+.summary-title {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-circle-button {
+    position: absolute;
+    cursor: pointer;
+    color: var(--terracota);
+    font-size: 56px;
+    left:3rem;
+}
