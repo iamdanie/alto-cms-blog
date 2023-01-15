@@ -18,19 +18,27 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   const [foundPosts, setFoundPosts] = React.useState<Post[]>([])
   const posts: Post[] = getPosts()
 
-  const handlePostsSearch = (value: string) => {
-    setSearchTerm(value)
-
-    if (value === '') {
+  React.useEffect(() => {
+    return () => {
+      setSearchTerm('')
       setFoundPosts([])
-      return
+    }
+  }, [isOpen])
+
+  const handlePostsSearch = (value: string) => {
+    const searchValue = value.toLowerCase()
+
+    setSearchTerm(searchValue)
+
+    if (searchValue === '') {
+      setFoundPosts([])
     }
 
-    const found = posts.filter(({ title }) => title.includes(value))
+    const found = posts.filter(({ title }) =>
+      title.toLowerCase().includes(value)
+    )
 
-    if (found.length) {
-      setFoundPosts(found)
-    }
+    setFoundPosts(found)
   }
 
   const handlePostClick = ({ id }: Post) => {
