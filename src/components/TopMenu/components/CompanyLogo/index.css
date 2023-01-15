@@ -1,5 +1,6 @@
 .logo-container {
   padding: 1rem;
+  cursor: pointer;
 }
 
 .logo-container img {

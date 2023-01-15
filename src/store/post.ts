@@ -37,4 +37,18 @@ function getPosts() {
   return getItem('posts') || []
 }
 
-export { createPost, getPosts, getPostById }
+function getPostsSummary(amount: number = 0) {
+  const posts: Post[] = getItem('posts') || []
+
+  posts.sort(
+    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  )
+
+  if (amount === 0) {
+    return posts
+  }
+
+  return posts.slice(0, amount)
+}
+
+export { createPost, getPosts, getPostsSummary, getPostById }

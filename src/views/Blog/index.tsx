@@ -1,11 +1,11 @@
 import React from 'react'
-import { getPosts } from '../../store/post'
+import { getPostsSummary } from '../../store/post'
 import type { Post } from '../../types/Post'
 import BlogItem from '../../components/BlogItem'
 import './index.css'
 
 function Blog(): React.ReactElement<{}> {
-  const posts: Post[] = getPosts()
+  const posts: Post[] = getPostsSummary()
 
   return (
     <>

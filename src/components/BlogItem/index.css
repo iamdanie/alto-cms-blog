@@ -20,7 +20,7 @@
     text-align: start;
 }
 .blog-item-author {
-    color: #5d576b;
+    color: var(--independence);
     margin: 1rem 0 1rem 0;
     text-align: start;
 }
