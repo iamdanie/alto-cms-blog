@@ -3,7 +3,6 @@ import Modal from '../../../Modal'
 import { getPosts } from '../../../../store/post'
 import type { Post } from '../../../../types/Post'
 
-import './index.css'
 import ResultItem from '../ResultItem'
 import { useNavigate } from 'react-router-dom'
 

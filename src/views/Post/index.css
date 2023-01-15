@@ -4,7 +4,7 @@
 }
 
 .post-author {
-    color: #E6EBE0;
+    color: var(--alabaster);
     text-align: center;
     margin: 1rem 0;
 }
@@ -15,7 +15,7 @@
 }
 
 .post-content {
-    background-color: #fff;
+    background-color: var(--white);
     padding: 1rem;
     margin: 3rem 8rem 0 8rem;
     border-radius: 10px;
@@ -24,6 +24,6 @@
 .title-container {
     padding: 3rem 3rem 0 3rem;
     width: auto;
-    background-color: #ED6A5A;
-    color: #fff;
+    background-color: var(--terracota);
+    color: var(--white);
 }

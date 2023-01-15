@@ -17,7 +17,7 @@
     text-align: start;
 }
 .result-item-author {
-    color: #5d576b;
+    color: var(--independence);
     margin: 0;
     text-align: start;
 }

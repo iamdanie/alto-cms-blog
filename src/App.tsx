@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route, RouteObject, Routes } from 'react-router-dom'
-import './App.css'
 import TopMenu from './components/TopMenu'
 import router from './routes'
 

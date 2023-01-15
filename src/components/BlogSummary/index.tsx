@@ -1,17 +1,18 @@
 import React from 'react'
-import { getPosts } from '../../store/post'
+import { getPostsSummary } from '../../store/post'
 import { Post } from '../../types/Post'
 import BlogItem from '../BlogItem'
+
 import './index.css'
 
 function BlogSummary(): React.ReactElement<{}> {
-  const posts: Post[] = getPosts()
+  const posts: Post[] = getPostsSummary(4)
 
   return (
     <>
       <h1>Latest Posts</h1>
       <div className="summary-container">
-        {posts.slice(0, 4).map(post => (
+        {posts.map(post => (
           <BlogItem key={post.id} post={post} />
         ))}
       </div>

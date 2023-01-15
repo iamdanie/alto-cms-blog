@@ -3,29 +3,20 @@
     flex-direction: column;
     align-self: center;
     margin: 3rem;
-    background-color: #e6ebe0;
-}
-
-.text-input {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #ddd;
-    height: 24px;
-    font-size: 24px;
-    width: 100%;
-    padding: 10px
+    background-color: var(--alabaster);
 }
 
 .text-area {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #ddd;
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
     margin: 1rem;
     padding: 10px;
     resize: none;
 }
 
 .label {
+    font-weight: 400;
     font-size: 24px;
     margin-right: 1rem;
 }
