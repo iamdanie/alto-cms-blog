@@ -1,10 +1,16 @@
-.blog-container {
+/* .blog-container {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 10px;
     padding: 0 3rem 3rem 3rem;
-}
+} */
 
 .title-wrapper {
     margin-bottom: 3rem;
 }
+
+/* @media screen and (max-width: 768px) {
+    .blog-container {
+        grid-template-columns: auto;
+    }
+} */

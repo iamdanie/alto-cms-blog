@@ -30,7 +30,7 @@ function BlogSummary(): React.ReactElement<{}> {
           <RiAddCircleFill title="Create" onClick={() => navigate('/new')} />
         </div>
       </div>
-      <div className="summary-container">
+      <div className="blog-container">
         {posts.map(post => (
           <BlogItem key={post.id} post={post} />
         ))}
