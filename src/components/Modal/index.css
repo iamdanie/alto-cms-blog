@@ -29,8 +29,8 @@
 
 .modal-close-action {
     position: absolute;
-    top: 3%;
-    right: 3%;
-    font-size: 28px;
+    top: 1rem;;
+    right: 1rem;
+    font-size: 32px;
     cursor: pointer;
 }

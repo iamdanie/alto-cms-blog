@@ -3,3 +3,7 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+.section-item-active {
+    color: var(--alabaster);
+}

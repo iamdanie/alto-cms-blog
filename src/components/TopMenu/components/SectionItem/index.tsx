@@ -5,13 +5,19 @@ import './index.css'
 interface SectionItemProps {
   title: string
   route: string
+  active: boolean
 }
 
-const SectionItem: React.FC<SectionItemProps> = ({ title, route }) => {
+const SectionItem: React.FC<SectionItemProps> = ({ title, route, active }) => {
   const navigate = useNavigate()
 
   return (
-    <div className='section-item' onClick={() => navigate(route)}>{title}</div>
+    <div
+      className={`section-item ${active ? 'section-item-active' : ''}`}
+      onClick={() => navigate(route)}
+    >
+      {title}
+    </div>
   )
 }
 
