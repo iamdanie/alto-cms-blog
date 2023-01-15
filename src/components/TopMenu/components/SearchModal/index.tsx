@@ -2,7 +2,10 @@ import React from 'react'
 import Modal from '../../../Modal'
 import { getPosts } from '../../../../store/post'
 import type { Post } from '../../../../types/Post'
-import BlogItem from '../../../BlogItem'
+
+import './index.css'
+import ResultItem from '../ResultItem'
+import { useNavigate } from 'react-router-dom'
 
 type SearchModalProps = {
   isOpen: boolean
@@ -10,6 +13,7 @@ type SearchModalProps = {
 }
 
 const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
+  const navigate = useNavigate()
   const [searchTerm, setSearchTerm] = React.useState<string>('')
   const [foundPosts, setFoundPosts] = React.useState<Post[]>([])
   const posts: Post[] = getPosts()
@@ -29,6 +33,11 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     }
   }
 
+  const handlePostClick = ({ id }: Post) => {
+    onClose()
+    navigate(`post/${id}`)
+  }
+
   return (
     <Modal open={isOpen} onClose={onClose}>
       <>
@@ -44,7 +53,11 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
         />
         <div>
           {foundPosts.map(post => (
-            <BlogItem key={post.id} post={post} />
+            <ResultItem
+              key={post.id}
+              post={post}
+              onClick={() => handlePostClick(post)}
+            />
           ))}
         </div>
       </>

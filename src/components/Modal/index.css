@@ -14,8 +14,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #E6EBE0;
+    opacity: 0.85;
     padding: 3rem;
     z-index: 1000;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    overflow-y: scroll;
 }
 
 .modal-actions {
