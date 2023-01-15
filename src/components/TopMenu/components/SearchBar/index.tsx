@@ -1,7 +1,7 @@
 import React from 'react'
-import Modal from '../../../Modal'
 import { RiSearchLine } from 'react-icons/ri'
 import './index.css'
+import SearchModal from '../SearchModal'
 
 function SearchBar(): React.ReactElement<{}> {
   const [isModalOpen, setIsModalOpen] = React.useState<boolean>(false)
@@ -12,9 +12,7 @@ function SearchBar(): React.ReactElement<{}> {
         <RiSearchLine />
         <div>Search</div>
       </div>
-      <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <div style={{ color: 'black', fontWeight: 600 }}>{'Search Here'}</div>
-      </Modal>
+      <SearchModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   )
 }
