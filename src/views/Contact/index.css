@@ -1,0 +1,8 @@
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info a {
+    margin-top: 1rem;
+}

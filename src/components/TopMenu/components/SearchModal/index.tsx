@@ -19,7 +19,17 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   const posts: Post[] = getPosts()
 
   React.useEffect(() => {
+    const keyDownHandler = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault()
+        onClose()
+      }
+    }
+
+    document.addEventListener('keydown', keyDownHandler)
+
     return () => {
+      document.removeEventListener('keydown', keyDownHandler)
       setSearchTerm('')
       setFoundPosts([])
     }
@@ -49,6 +59,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     <Modal open={isOpen} onClose={onClose}>
       <>
         <input
+          autoFocus
           className="search-input"
           id="title"
           name="title"
